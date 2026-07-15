@@ -24,4 +24,11 @@ for (const [relativePath, content] of Object.entries(files)) {
   await writeFile(outputPath, content, 'utf8');
 }
 
+const jsxDevShim = `import {jsx as runtimeJsx} from 'react/jsx-runtime';
+
+export {Fragment, jsx, jsxs} from 'react/jsx-runtime';
+export const jsxDEV = runtimeJsx;
+`;
+await writeFile(resolve(process.cwd(), 'src/astryx-jsx-dev-runtime-shim.ts'), jsxDevShim, 'utf8');
+
 console.log(`Materialized ${Object.keys(files).length} Nexa UI source files.`);
