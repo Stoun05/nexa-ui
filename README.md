@@ -1,40 +1,36 @@
-# Nexa UI
+# Nexa UI v1.1
 
-**Nexa UI** — Astryx dizaýn ulgamynyň komponentleri bilen custom reňk, tipografiýa, animasiýa we maglumat wizualizasiýasyny birleşdirýän türkmençe dolandyryş merkezi.
+Nexa UI — Astryx komponentleri bilen custom dizaýny birleşdirýän türkmençe dolandyryş merkezi.
 
-## 2-nji tapgyrda goşulanlar
+## v1.1-de edilen işler
 
-- täsirli gradient hero we çalt hereket düwmeleri;
-- aýratyn reňk palitrasy we 4 accent görnüşi;
-- türkmençe harplar üçin optimizirlenen tipografiýa;
-- custom KPI, taslama we müşderi kartlary;
-- hover, sahypa geçişi, san/grafik we loading animasiýalary;
-- custom boş ýagdaý, loading, notification, status stepper we mini grafikler;
-- girdeji grafigi, sparkline we donut chart;
-- ýagty/garaňky režim we hereketi azaltmak sazlamasy;
-- LocalStorage-da tema, sargytlar we sazlamalar;
-- desktop, tablet we mobil görnüş;
-- mobil aşaky navigasiýa;
-- CSV hasabat eksporty;
-- GitHub Pages awtomatik deploy.
+- 31 sany source faýldan ybarat `app/pages/components/hooks/data/utils/styles` gurluşy;
+- source paketi SHA-256 bilen barlanýar we `npm run materialize` arkaly `src/` bukjasyna açylýar;
+- React lazy loading we sahypa boýunça code splitting;
+- doly sargyt CRUD: goşmak, redaktirlemek, pozmak, status/progress üýtgetmek;
+- toparlaýyn saýlama, toparlaýyn status we pozmak;
+- 4 ädimli sargyt wizard-y we LocalStorage auto-save;
+- müşderi profili, sargyt taryhy, bellikler we redaktirleme;
+- professional sticky-header tablisa we mobil kart görnüşi;
+- dashboard widgetlerini gizlemek we tertibini üýtgetmek;
+- custom loading, empty state, error boundary, toast we micro-interactionlar;
+- ýagty/garaňky režim, ykjam tablisa we reduced-motion sazlamasy;
+- responsive desktop, tablet we mobil navigasiýa;
+- CSV eksport we analitika sahypasy;
+- GitHub Pages üçin lint + build + deploy workflow.
 
-## Astryx komponentleri
+## Source gurluşyny açmak
 
-- Button
-- Badge
-- TextInput
-- Dialog / DialogHeader
-- Layout / LayoutContent / LayoutFooter
-- SegmentedControl
-- Switch
-- ProgressBar
-- HStack
-- Theme + Neutral Theme
+```bash
+npm install
+npm run materialize
+```
+
+Bu buýruk `source/source-v1.1.part*` böleklerini birleşdirip, SHA-256 boýunça barlaýar we 31 sany okalýan TypeScript/CSS faýlyny `src/` içine döredýär.
 
 ## Işletmek
 
 ```bash
-npm install
 npm run dev
 ```
 
@@ -45,6 +41,4 @@ npm run lint
 npm run build
 ```
 
-## GitHub Pages
-
-`main` şahasy täzelenende `.github/workflows/deploy-pages.yml` awtomatik build we deploy geçirýär.
+`main` şahasy täzelenende GitHub Pages workflow awtomatik işleýär.
