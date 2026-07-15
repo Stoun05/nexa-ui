@@ -1,20 +1,29 @@
-# Nexa UI v1.2
+# Nexa UI v1.3
 
-Nexa UI — Astryx komponentleri we custom dizaýn bilen gurlan köp dilli türkmençe dolandyryş merkezi.
+Nexa UI — Astryx komponentleri we custom dizaýn bilen gurlan köp dilli dolandyryş merkezi.
 
-## v1.2-de goşulanlar
+## v1.3-de goşulanlar
 
-- `Ctrl/Cmd + K` global Command Palette;
-- okalan/okalmadyk ýagdaýly habarnamalar merkezi;
-- hyzmatlar katalogy: goşmak, redaktirlemek, status we kategoriýa;
-- tölegler bölümi: paid/partial/pending/overdue, CSV eksport;
-- faktura merkezi: sargytdan faktura döretmek, HTML ýüklemek, brauzerden PDF/çap;
-- dashboard widgetlerini drag-and-drop bilen tertiplemek we gizlemek;
-- login, parol dikeltmek, optional 2FA demo we giriş taryhy;
-- Türkmençe, Rusça we Iňlisçe doly dil ulgamy;
-- LocalStorage persistence, dark mode, compact mode;
-- lazy-loaded sahypalar we aýratyn production chunks;
-- responsive desktop, tablet we mobil navigasiýa.
+- ulanyjylar we rollar: administrator, menejer, operator, diňe görýän ulanyjy;
+- her rol üçin aýratyn rugsatlar we hereketleriň goragy;
+- audit log: kim, haçan we näme üýtgetdi;
+- sargytlara surat we dokument ýüklemek, preview, download we pozmak;
+- sene, hyzmat we status boýunça giň hasabatlar;
+- girdeji, çykdajy, arassa peýda, hyzmat reýtingi we status grafikler;
+- göni `%PDF-1.4` faktura döretmek we ýüklemek;
+- ähli ýerli maglumatlary JSON backup görnüşinde çykarmak we dikeltmek;
+- lint, production build, asset/sintaksis, lazy chunk, PDF we React `jsxDEV` testleri;
+- GitHub Pages deploy-dan öň awtomatik `npm test`.
+
+## Öňki mümkinçilikler
+
+- `Ctrl/Cmd + K` global gözleg;
+- habarnamalar merkezi;
+- sargyt, müşderi, hyzmat, töleg we faktura dolandyryşy;
+- dashboard widget drag-and-drop;
+- login, parol dikeltmek we optional 2FA demo;
+- Türkmençe, Rusça we Iňlisçe;
+- dark mode, compact mode we responsive mobil görnüş.
 
 ## Demo giriş
 
@@ -29,12 +38,12 @@ npm install
 npm run dev
 ```
 
-## Barlag
+## Doly barlag
 
 ```bash
-npm run lint
-npm run build
-npm run preview
+npm test
 ```
 
-`main` şahasy täzelenende GitHub Pages workflow lint, build we deploy geçirýär.
+`npm run materialize` öňki SHA-256 bilen barlanan v1.2 bazany açýar, soň `overrides-v1.3` bukjasyndaky okalýan modullary ulanýar.
+
+`main` şahasy täzelenende GitHub Pages workflow ähli testleri geçirip, diňe şondan soň deploy edýär.
