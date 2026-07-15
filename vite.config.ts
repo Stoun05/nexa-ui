@@ -7,19 +7,18 @@ export default defineConfig({
   base: './',
   resolve: {
     alias: {
-      'react/jsx-dev-runtime': fileURLToPath(
-        new URL('./src/astryx-jsx-dev-runtime-shim.ts', import.meta.url),
-      ),
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      'react/jsx-dev-runtime': fileURLToPath(new URL('./src/astryx-jsx-dev-runtime-shim.ts', import.meta.url)),
     },
   },
   build: {
     target: 'es2022',
-    cssCodeSplit: true,
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) return 'react';
-          if (id.includes('node_modules/@astryxdesign')) return 'astryx';
+          if (id.includes('node_modules/react')) return 'react';
+          if (id.includes('@astryxdesign')) return 'astryx';
+          if (id.includes('node_modules')) return 'vendor';
           return undefined;
         },
       },

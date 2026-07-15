@@ -1,36 +1,31 @@
-# Nexa UI v1.1
+# Nexa UI v1.2
 
-Nexa UI — Astryx komponentleri bilen custom dizaýny birleşdirýän türkmençe dolandyryş merkezi.
+Nexa UI — Astryx komponentleri we custom dizaýn bilen gurlan köp dilli türkmençe dolandyryş merkezi.
 
-## v1.1-de edilen işler
+## v1.2-de goşulanlar
 
-- 31 sany source faýldan ybarat `app/pages/components/hooks/data/utils/styles` gurluşy;
-- source paketi SHA-256 bilen barlanýar we `npm run materialize` arkaly `src/` bukjasyna açylýar;
-- React lazy loading we sahypa boýunça code splitting;
-- doly sargyt CRUD: goşmak, redaktirlemek, pozmak, status/progress üýtgetmek;
-- toparlaýyn saýlama, toparlaýyn status we pozmak;
-- 4 ädimli sargyt wizard-y we LocalStorage auto-save;
-- müşderi profili, sargyt taryhy, bellikler we redaktirleme;
-- professional sticky-header tablisa we mobil kart görnüşi;
-- dashboard widgetlerini gizlemek we tertibini üýtgetmek;
-- custom loading, empty state, error boundary, toast we micro-interactionlar;
-- ýagty/garaňky režim, ykjam tablisa we reduced-motion sazlamasy;
-- responsive desktop, tablet we mobil navigasiýa;
-- CSV eksport we analitika sahypasy;
-- GitHub Pages üçin lint + build + deploy workflow.
+- `Ctrl/Cmd + K` global Command Palette;
+- okalan/okalmadyk ýagdaýly habarnamalar merkezi;
+- hyzmatlar katalogy: goşmak, redaktirlemek, status we kategoriýa;
+- tölegler bölümi: paid/partial/pending/overdue, CSV eksport;
+- faktura merkezi: sargytdan faktura döretmek, HTML ýüklemek, brauzerden PDF/çap;
+- dashboard widgetlerini drag-and-drop bilen tertiplemek we gizlemek;
+- login, parol dikeltmek, optional 2FA demo we giriş taryhy;
+- Türkmençe, Rusça we Iňlisçe doly dil ulgamy;
+- LocalStorage persistence, dark mode, compact mode;
+- lazy-loaded sahypalar we aýratyn production chunks;
+- responsive desktop, tablet we mobil navigasiýa.
 
-## Source gurluşyny açmak
+## Demo giriş
 
-```bash
-npm install
-npm run materialize
-```
-
-Bu buýruk `source/source-v1.1.part*` böleklerini birleşdirip, SHA-256 boýunça barlaýar we 31 sany okalýan TypeScript/CSS faýlyny `src/` içine döredýär.
+- E-poçta: `admin@nexa.tm`
+- Açar söz: `nexa2026`
+- 2FA demo kody: `2026`
 
 ## Işletmek
 
 ```bash
+npm install
 npm run dev
 ```
 
@@ -39,6 +34,7 @@ npm run dev
 ```bash
 npm run lint
 npm run build
+npm run preview
 ```
 
-`main` şahasy täzelenende GitHub Pages workflow awtomatik işleýär.
+`main` şahasy täzelenende GitHub Pages workflow lint, build we deploy geçirýär.
